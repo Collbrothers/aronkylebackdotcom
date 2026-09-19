@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aronkyleback.com/sitemap-index.xml

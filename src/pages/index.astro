@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const featuredProjects = (await getCollection('projects')).filter(project => project.data.featured).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
 ---
+<Layout
+  title="Home"
+  description="Aron Kylebäck - maker and homelab hobbyist in Skövde, Sweden. Building self-hosted systems, 3D-printed hardware, and starting a systems-focused CS degree in 2027."
+>
+  <h1 class="text-3xl font-bold tracking-tight">Aron Kylebäck</h1>
+  <p class="mt-4 text-lg text-neutral-700">
+    I build things; self-hosted systems, embedded/maker projects, and the
+    occasional woodworking projects. Starting a
+    computer science degree with a systems specialization at Högskolan i Skövde in 2027.
+  </p>
+  {featuredProjects.length > 0 && (
+      <div class="mt-10">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+          Featured
+        </h2>
+        <ul class="mt-4 space-y-4">
+          {featuredProjects.map((project) => (
+              <li>
+                <a href=`/projects/${project.id}` class="font-medium hover:underline">{project.data.title} →</a>
+                <p class="text-neutral-600 text-sm">
+                  {project.data.description}
+                </p>
+              </li>
+          ))}
+        </ul>
+      </div>
+  )}
 
-<Layout>
-	<Welcome />
 </Layout>
