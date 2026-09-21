@@ -22,9 +22,14 @@ const { Content } = await render(project);
     <a href="/projects" class="text-sm text-neutral-500 hover:underline">← All projects</a>
     <h1 class="text-2xl font-bold tracking-tight mt-2">{project.data.title}</h1>
     <p class="text-sm text-neutral-400 mt-1">{project.data.stack.join(' · ')}</p>
-    {project.data.link && (
-            <a href={project.data.link} class="text-sm text-blue-600 hover:underline mt-1 inline-block">
-                View project →
+    {project.data.repository && (
+            <a href={project.data.repository} class="text-sm text-blue-600 hover:underline mt-1 mr-5 inline-block">
+                View repository →
+            </a>
+    )}
+    {project.data.website && (
+            <a href={project.data.website} class="text-sm text-blue-600 hover:underline mt-1 inline-block">
+                View website →
             </a>
     )}
 

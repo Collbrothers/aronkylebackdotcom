@@ -2,7 +2,7 @@
 title: "Vaktis"
 description: "A PHP/MySQL dog-sitting listings web app, built as a four-person graded school project, I led backend development."
 stack: ["PHP", "MySQL"]
-link: "https://github.com/Collbrothers/vaktis"
+repository: "https://github.com/Collbrothers/vaktis"
 date: 2026-09-19
 featured: false
 ---

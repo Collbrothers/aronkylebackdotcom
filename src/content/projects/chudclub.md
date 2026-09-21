@@ -2,7 +2,8 @@
 title: "ChudClub"
 description: "A joke site for roasting friends' Steam stats, built with unreasonably serious infrastructure: Cloudflare Workers, D1 etc"
 stack: ["SvelteKit", "Cloudflare", "Workers", "D1", "OpenID"]
-link: "https://github.com/Collbrothers/chudclubnet"
+repository: "https://github.com/Collbrothers/chudclubnet"
+website: "https://chudclub.net"
 date: 2026-09-19
 ---
 

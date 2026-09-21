@@ -9,7 +9,8 @@ const projects = defineCollection({
         description: z.string().max(155),
         stack: z.array(z.string()),
         role: z.string().optional(),
-        link: z.url().optional(),
+        repository: z.url().optional(),
+        website: z.url().optional(),
         date: z.coerce.date(),
         featured: z.boolean().default(false),
     })

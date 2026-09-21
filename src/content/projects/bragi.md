@@ -2,7 +2,7 @@
 title: "Bragi"
 description: "A self-hosted, open-source Spotify alternative built for homelabs; Rust backend, SvelteKit frontend."
 stack: ["Rust", "SvelteKit", "Self-hosted", "Axum", "PostgreSQL", "Apache OpenDAL", "Rayon"]
-link: "https://github.com/bragilabs/bragi"
+repository: "https://github.com/bragilabs/bragi"
 date: 2026-09-19
 featured: true
 ---
